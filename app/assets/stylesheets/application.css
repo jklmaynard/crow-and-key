@@ -3,13 +3,440 @@
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
  *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
- */
+ *= require_tree .
+*/
+
+body {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0;
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
+  font-size: 18px;
+  line-height: 18px;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+a {
+  color: #ee6004;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+
+a.hover {
+  color: #005580;
+  text-decoration: none;
+}
+
+a.selected {
+  background-color:#ee6004;
+  color: #ffffff;
+}
+
+p {
+  margin: 0 0 9px;
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.small {
+  line-height: 20px;
+  font-size: 15px;
+  color: #666666;
+}
+
+.smalltitle {
+  line-height: 13px;
+  font-size: 15px;
+  color: #666666;
+}
+
+.lead {
+  margin-bottom: 18px;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 27px;
+}
+
+.title {
+  display: block;
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
+  font-size: 50px;
+  text-transform:uppercase;
+  letter-spacing: 5px;
+  line-height: 1;
+}
+
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+  border: 1px solid #eee;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.03);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.03);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.03);
+}
+
+.divider {
+  font-size: 24px;
+}
+
+p.quote {
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #666666;
+}
+
+
+h1,
+h2
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: inherit;
+  font-weight: bold;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-weight: normal;
+  color: #999999;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 36px;
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+h1 small {
+  font-size: 34px;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 1;
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
+  font-weight: 400;
+}
+
+h2 small {
+  font-size: 18px;
+}
+
+h3 {
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform:uppercase;
+  letter-spacing: 2px;
+  line-height: 27px;
+  color: #999999;
+}
+
+h3 small {
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: none;
+  letter-spacing: 0px;
+  font-style: italic;
+  color: #66666;
+
+}
+
+h4,
+h5,
+h6 {
+  line-height: 18px;
+}
+
+h4 {
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform:uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+  color: #999999;
+}
+
+h4 small {
+  font-size: 12px;
+}
+
+h5 {
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform:uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+  color: #999999;
+}
+
+h6 {
+  font-size: 11px;
+  color: #999999;
+  text-transform: uppercase;
+}
+
+.shadow {
+    -webkit-box-shadow:  0px 0px 6px 0px rgba(0, 0, 0, .3);
+    box-shadow:  0px 0px 6px 0px rgba(0, 0, 0, .3);
+}
+
+
+.navbar {
+  color: #999999;
+}
+
+.navbar-inner {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  background-color: rgba(250, 250, 250, 0.90);
+  border-bottom: 1px solid #EAEAEA;
+
+}
+.navbar .brand:hover {
+  text-decoration: none;
+}
+
+.navbar .brand {
+  display: block;
+  background: url("/assets/pressmark-top.jpg") no-repeat;
+  float: left;
+  padding: 8px 60px 12px;
+  margin-left: -40px;
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform:uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+  color: #999999;
+}
+
+.navbar .nav > li {
+  display: block;
+  float: left;
+  font-style: italic;
+  font-size:20px;
+}
+
+.navbar .nav > li > a {
+  float: none;
+  padding: 9px 30px 11px;
+  line-height: 19px;
+  color: #999999;
+  text-decoration: none;
+}
+
+.navbar .nav > li > a:hover {
+  color: #222222;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover {
+  color: #222222;
+  text-decoration: none;
+}
+
+
+
+form {
+  margin: 0 0 10px;
+}
+
+
+input,
+textarea,
+select,
+.uneditable-input {
+  display: inline-block;
+  width: 600px;
+  height: 18px;
+  padding: 4px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #555555;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+.cf {
+  position:relative;
+  height:270px;
+  width:230px;
+  margin:0 auto;
+}
+
+.cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+/*.cf img.top:hover {
+  opacity:0;
+}*/
+
+.cf img.top.hidden {
+  opacity:0;
+}
+
+
+.footer {
+
+	    background-color: #FFFFFF;
+	    border-top: 1px solid #EAEAEA;
+	    padding-bottom: 20px;
+	    padding-top: 50px;
+		font-size: 16px;
+}
+
+
+.dot-separator {
+    background: url("/assets/pullbg.gif") repeat-x scroll center bottom transparent;
+    margin-bottom: 25px;
+    padding-top: 50px;
+}
+
+.dropdown-toggle {
+	display: block;
+    float: left;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.dropdown-toggle a {
+
+	    color: #999999;
+	    float: none;
+	    line-height: 19px;
+	    padding: 9px 30px 11px;
+	    text-decoration: none;
+}
+
+ul.submissions-title {
+  font-size: 21px;
+  font-style: italic;
+}
+
+ul.submissions-list {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left:30px;
+}
+
+.submissions-list li {
+  line-height: 28px;
+}
+
+.nav-tabs > li > a {
+  padding: 10px 20px !important;
+  line-height: 24px !important;
+  border: 1px solid transparent;
+  -webkit-border-radius: 0px !important;
+     -moz-border-radius: 0px !important;
+          border-radius: 0px !important;
+  }
+
+.thumbnail-app {
+  display: block;
+  padding: 4px;
+  line-height: 1;
+  border: none;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.thumbnail-app img {
+  border-radius: 50%;
+}
+
+/******* Acknowledgements Page - Logo Flex Containers, and Logo Items *******/
+
+.logo-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.logo-item {
+  flex-shrink: 2;
+  max-height: 120px;
+  max-width: 120px;
+  padding: 10px;
+}
+
+/******* DROP DOWN MENU FROM NAVIGATION *******/
+.dropdown {
+  display: inline-block;
+  padding: 9px 30px 11px 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

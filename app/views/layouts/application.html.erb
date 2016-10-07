@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CrowAndKey</title>
-    <%= csrf_meta_tags %>
+<head>
+  <link rel="icon"  type="image/png" href="assets/favicon.ico">
+  <title>Tavern Books</title>
+  <%= stylesheet_link_tag    "bootstrap" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+	<%= javascript_include_tag "bootstrap" %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
+</head>
+<body>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+	<div class="navbar navbar-fixed-top">
+	      <div class="navbar-inner">
+	        <div class="container">
+	          <div class="nav-collapse">
+	          	<a class="brand" href="/">Tavern<br>Books</a>
+	            <ul class="nav pull-right" style="padding-top:10px;">
+    			      <li><a href="/books">The Living Library</a></li>
+    			      <li><a href="/subscriptions">Subscriptions</a></li>
+    			      <li><a href="/wrolstad-series">Wrolstad Series</a></li>
+    				    <li><a href="/submissions">Submissions</a></li>
+                <li id="support" class="dropdown">Support
+                  <div id="support-dropdown" class="dropdown-content">
+                    <a href="/support">Support</a>
+                    <a href="/acknowledgements">Acknowledgments</a>
+                  </div>
+                </li>
+    			      <li><a href="/about">About</a></li>
+	            </ul>
+	          </div><!--/.nav-collapse -->
+	        </div>
+	      </div>
+	    </div>
 
-  <body>
-    <%= yield %>
-  </body>
+<div style="padding-bottom:100px; padding-top:40px;">
+
+	<% if notice %>
+		<p class="notice"><%= notice %></p>
+	<% end %>
+
+	<% if alert %>
+		<p class="alert"><%= alert %></p>
+	<% end %>
+
+	<%= yield %>
+</div>
+
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="span8">
+				<h5>&copy; Tavern Books <%= Time.now.year %><br><br></h5>
+				<div id="fb-root"></div>
+				<script src="http://connect.facebook.net/en_US/all.js#appId=200482016666706&amp;xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Tavern-Books/163093477074431" send="false" width="450" show_faces="false" font="arial"></fb:like>
+			</div>
+		</div>
+	</div>
+
+</footer>
+
+</body>
 </html>
