@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root :to => 'application#index'
+  root :to => 'application#angular'
 
   resources :books do
     resources :comments, :except => [:index, :new]

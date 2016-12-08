@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-
-  def index
-
+  def angular
+    render 'layouts/application'
   end
 end
