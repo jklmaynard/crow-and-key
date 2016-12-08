@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="icon"  type="image/png" href="assets/favicon.ico">
+  <link rel="icon"  type="image/png" href="">
   <title>Crow and Key</title>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
-  <%= stylesheet_link_tag    "bootstrap" %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
-	<%= javascript_include_tag "bootstrap" %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
 </head>
-<body ng-app="crowAndKey" ng-controller="MainCtrl">
+<body ng-app="crowAndKey">
 
 	<div class="navbar navbar-fixed-top">
 	      <div class="navbar-inner">
@@ -31,7 +27,7 @@
 <div id="viewport-container" style="padding-bottom:100px; padding-top:40px;">
   <div class="ui-container">
       <ui-view>
-        {{test}}
+        <script type="text/ng-template" id="home.html"></script>
       </ui-view>
   </div>
 </div>
@@ -42,7 +38,7 @@
 			<div class="span8">
 				<h5>&copy; Tavern Books <%= Time.now.year %><br><br></h5>
 				<div id="fb-root"></div>
-				<script src="http://connect.facebook.net/en_US/all.js#appId=200482016666706&amp;xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Tavern-Books/163093477074431" send="false" width="450" show_faces="false" font="arial"></fb:like>
+				<!-- <script src="http://connect.facebook.net/en_US/all.js#appId=200482016666706&amp;xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Tavern-Books/163093477074431" send="false" width="450" show_faces="false" font="arial"></fb:like> -->
 			</div>
 		</div>
 	</div>
