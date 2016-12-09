@@ -1,4 +1,13 @@
-<div class="">
-  <h3>hello world!  This is a div.</h3>
-  {{test}}
+<div class="books-overview-container col-md-12">
+  <div class="post-overview-header">
+    <h4>Tavern Books</h4>
+  </div>
+  <div ng-repeat="book in books" class="book-overview">
+    <div class="col-md-12">
+      <h5>{{book.title}}</h5>
+    </div>
+    <div class="book-body col-md-12">
+      <p>{{book.summary}}</p>
+    </div>
+  </div>
 </div>

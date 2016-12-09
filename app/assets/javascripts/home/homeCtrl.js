@@ -1,8 +1,8 @@
 angular.module('crowAndKey')
 .controller('HomeCtrl', [
   '$scope',
-  function($scope) {
-    $scope.test = 'Hello world!';
-    $scope.home_test = 'Hello Home World!!';
+  'books',
+  function($scope, books) {
+    $scope.books = books.books;
   }
 ]);
