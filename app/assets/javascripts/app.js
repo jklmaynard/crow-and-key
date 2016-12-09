@@ -9,6 +9,11 @@ angular.module('crowAndKey', ['ui.router', 'templates'])
         controller: 'HomeCtrl'
       }
     );
+    $stateProvider.state('books', {
+        url: '/books/{id}',
+        templateUrl: 'books/_books.html',
+        controller: 'BooksCtrl'
+    });
     $urlRouterProvider.otherwise('home');
   }
 ])
