@@ -6,7 +6,12 @@ angular.module('crowAndKey', ['ui.router', 'templates'])
     $stateProvider.state('home', {
         url: '/home',
         templateUrl: 'home/_home.html',
-        controller: 'HomeCtrl'
+        controller: 'HomeCtrl',
+        resolve: {
+          bookPromise: ['books', function(books) {
+            return books.getAll();
+          }]
+        }
       }
     );
     $stateProvider.state('books', {
