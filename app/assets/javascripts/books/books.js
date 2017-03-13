@@ -10,6 +10,12 @@ angular.module('crowAndKey')
           angular.copy(data.data, obj.books);
         });
       }
+      obj.create = function(book) {
+        return $http.post('/books.json', book).then(function(data) {
+          obj.books.push(data.data);
+          return obj.books;
+        })
+      }
       return obj;
     }
   ]);

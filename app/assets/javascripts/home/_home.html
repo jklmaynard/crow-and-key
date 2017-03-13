@@ -4,10 +4,29 @@
   </div>
   <div ng-repeat="book in books" class="book-overview">
     <div class="col-md-12">
-      <a href="#!/books/{{$index}}"><h5>{{book.title}}</h5></a>      
+      <a href="#!/books/{{$index}}"><h5>{{book.title}}</h5></a>
     </div>
     <div class="book-body col-md-12">
       <p>{{book.summary}}</p>
+    </div>
+  </div>
+</div>
+<div class="add-books-container col-md-12">
+  <div class="add-books" ng-show="admin()">
+    <button type="button" name="button" ng-click="formVisible = !formVisible">Create New Book</button>
+    <div ng-show="formVisible">
+      <form class="" ng-submit="addBook()">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Title" ng-model="title">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Author" ng-model="author">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" name="name" rows="20" cols="25" placeholder="Summary goes here . . ." ng-model="summary"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" ng-click="formVisible = !formVisible">Add Book</button>
+      </form>
     </div>
   </div>
 </div>
