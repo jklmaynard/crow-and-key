@@ -16,6 +16,15 @@ angular.module('crowAndKey')
           return obj.books;
         })
       }
+      obj.edit = function(book) {
+        return $http.put('/books/' + book.id + '.json', book);
+      }
+      obj.delete = function(book) {
+        position = obj.books.indexOf(book);
+        return $http.delete('/books/' + book.id + '.json').then(function() {
+          obj.books.splice(position, 1);
+        });
+      }
       return obj;
     }
   ]);
