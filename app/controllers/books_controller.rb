@@ -12,8 +12,18 @@ class BooksController < ApplicationController
     respond_with Book.create(book_params)
   end
 
-  def show
+  def edit
     respond_with Book.find(params[:id])
+  end
+
+  def update
+    book = Book.find(params[:id])
+    book.update(book_params)
+    respond_with book
+  end
+
+  def destroy
+    respond_with Book.destroy(params[:id])
   end
 
   private
