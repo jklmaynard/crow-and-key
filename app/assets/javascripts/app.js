@@ -2,6 +2,7 @@ angular.module('crowAndKey', ['ui.router', 'templates', 'Devise'])
 .config([
   '$stateProvider',
   '$urlRouterProvider',
+  'AuthProvider',
   function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('home', {
       url: '/home',
@@ -25,6 +26,8 @@ angular.module('crowAndKey', ['ui.router', 'templates', 'Devise'])
       onEnter: ['$state', 'Auth', function($state, Auth) {
         Auth.currentUser().then(function() {
           $state.go('home');
+        }, function(err) {
+          console.log(err.data.error);
         });
       }]
     });
@@ -35,6 +38,8 @@ angular.module('crowAndKey', ['ui.router', 'templates', 'Devise'])
       onEnter: ['$state', 'Auth', function($state, Auth) {
         Auth.currentUser().then(function() {
           $state.go('home');
+        }, function(err) {
+          console.log(err.data.error);
         });
       }]
     });
