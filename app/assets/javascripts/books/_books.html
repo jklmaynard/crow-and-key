@@ -28,3 +28,19 @@
     </form>
   </div>
 </div>
+<div class="questions-div col-md-12">
+  <h3>Questions, Comments</h3>
+  <div class="questions-list col-md-12" ng-repeat="question in questions">
+    <div class="col-md-12">
+      <p>{{question.text}}</p>
+    </div>
+  </div>
+  <div class="">
+    <form class="" ng-submit="addQuestion()">
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="text">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Question</button>
+    </form>
+  </div>
+</div>
