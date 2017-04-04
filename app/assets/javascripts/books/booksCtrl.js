@@ -4,12 +4,13 @@ angular.module('crowAndKey')
   '$stateParams',
   'books',
   '$state',
-  function($scope, $stateParams, books, $state){
+  'Auth',
+  function($scope, $stateParams, books, $state, Auth){
     $scope.book = books.books[$stateParams.id];
-    $scope.admin = function() {
-      //same in homeCtrl, this bool will be set dynamically once devise gem is installed
-      return true
-    };
+    Auth.currentUser().then(function(user) {
+      $scope.user = user;
+      $scope.admin = $scope.user.is_admin ? true : false;
+    });
     $scope.edit = function() {
       books.edit({
         id: $scope.book.id,
@@ -21,6 +22,6 @@ angular.module('crowAndKey')
     $scope.delete = function(book) {
       books.delete(book)
       $state.go('home');
-    }
+    };
   }
 ]);

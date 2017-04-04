@@ -17,7 +17,12 @@ angular.module('crowAndKey', ['ui.router', 'templates', 'Devise'])
     $stateProvider.state('books', {
       url: '/books/{id}',
       templateUrl: 'books/_books.html',
-      controller: 'BooksCtrl'
+      controller: 'BooksCtrl',
+      resolve: {
+        bookPromise: ['books', function(books) {
+          return books.getAll();
+        }]
+      }
     });
     $stateProvider.state('login', {
       url: '/login',

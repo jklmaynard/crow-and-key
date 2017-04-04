@@ -9,7 +9,7 @@
     {{book.summary}}
   </p>
 </div>
-<div class="edit-book-div col-md-12" ng-show="admin()">
+<div class="edit-book-div col-md-12" ng-show="admin">
   <button type="button" name="button" ng-click="formVisible = !formVisible">Edit Book Info</button>
   <button type="button" name="delete" class="btn btn-warning" ng-click="delete(book)">Delete Book</button>
   <div ng-show="formVisible">

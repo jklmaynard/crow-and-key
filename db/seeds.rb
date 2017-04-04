@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Book.create(title: "First Book", author: "John Doe", summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
 Book.create(title: "Second Book", author: "Jane Doe", summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
-User.creaate(username: "jklmaynard", password: "test123", is_admin: true, email: "jklmaynard@yahoo.com")
-User.creaate(username: "jess_gaisford", password: "test123", is_admin: false, email: "jessica.gaisford@gmail.com")
+User.create(username: "jklmaynard", password: "test123", is_admin: true, email: "jklmaynard@yahoo.com")
+User.create(username: "jess_gaisford", password: "test123", is_admin: false, email: "jessica.gaisford@gmail.com")
