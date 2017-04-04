@@ -33,6 +33,7 @@
   <div class="questions-list col-md-12" ng-repeat="question in questions">
     <div class="col-md-12">
       <p>{{question.text}}</p>
+      <span ng-click="upVotes(question)">Like:  {{question.up_votes}}</span>
     </div>
   </div>
   <div class="">

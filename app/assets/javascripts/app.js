@@ -19,8 +19,8 @@ angular.module('crowAndKey', ['ui.router', 'templates', 'Devise'])
       templateUrl: 'books/_books.html',
       controller: 'BooksCtrl',
       resolve: {
-        bookPromise: ['books', function(books) {
-          return books.getAll();
+        book: ['$stateParams', 'books', function($stateParams, books) {
+          return books.get($stateParams.id);
         }]
       }
     });

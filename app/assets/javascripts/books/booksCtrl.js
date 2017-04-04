@@ -1,12 +1,12 @@
 angular.module('crowAndKey')
 .controller('BooksCtrl', [
   '$scope',
-  '$stateParams',
   'books',
+  'book',
   '$state',
   'Auth',
-  function($scope, $stateParams, books, $state, Auth){
-    $scope.book = books.books[$stateParams.id];
+  function($scope, books, book, $state, Auth){
+    $scope.book = book;
     books.getQuestions($scope.book.id).then(function(res) {
       $scope.questions = res.data;
     })
@@ -37,6 +37,9 @@ angular.module('crowAndKey')
         $scope.questions.push(question.data);
       });
       $scope.text = '';
+    }
+    $scope.upVotes = function(question) {
+      books.incrementUpVotes(book, question);
     }
   }
 ]);

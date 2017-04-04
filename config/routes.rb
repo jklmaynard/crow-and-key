@@ -5,8 +5,12 @@ Rails.application.routes.draw do
 
   resources :books do
     resources :comments, :except => [:index, :new]
+
     resources :questions do
       resources :comments, :except => [:index, :new]
+      member do
+        put '/upvote' => 'questions#upvote'
+      end
     end
   end
 end

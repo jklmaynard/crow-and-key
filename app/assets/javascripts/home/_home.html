@@ -4,7 +4,7 @@
   </div>
   <div ng-repeat="book in books" class="book-overview">
     <div class="col-md-12">
-      <a href="#!/books/{{$index}}"><h5>{{book.title}}</h5></a>
+      <a href="#!/books/{{book.id}}"><h5>{{book.title}}</h5></a>
     </div>
     <div class="book-body col-md-12">
       <p>{{book.summary}}</p>

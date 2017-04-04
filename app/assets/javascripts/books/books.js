@@ -36,6 +36,11 @@ angular.module('crowAndKey')
       obj.getQuestions = function(book_id) {
         return $http.get('/books/' + book_id + '/questions.json');
       };
+      obj.incrementUpVotes = function(book, question) {
+        return $http.put('/books/' + book.id + '/questions/' + question.id + '/upvote.json').then(function(data) {
+          question.up_votes += 1;
+        })
+      }
       return obj;
     }
   ]);
