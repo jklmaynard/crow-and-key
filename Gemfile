@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'angular-rails-templates'
 gem 'responders'
 gem 'devise', '~> 4.2.0'
+gem 'paperclip', '~> 4.2'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
