@@ -9,7 +9,9 @@ class BooksController < ApplicationController
   end
 
   def create
-    respond_with Book.create(book_params)
+    book = Book.create(book_params)
+    book.update(image: decode_base64)
+    respond_with book
   end
 
   def edit
@@ -28,7 +30,12 @@ class BooksController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit(:title, :author, :summary)
+    params.require(:book).permit(:title, :author, :summary, )
+  end
+  def decode_base64
+    decoded_data = Base64.decode64(params[:image][:base64])
+    data = StringIO.new(decoded_data)
+    data
   end
 
 end

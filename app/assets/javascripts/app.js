@@ -1,4 +1,4 @@
-angular.module('crowAndKey', ['ui.router', 'templates', 'Devise'])
+angular.module('crowAndKey', ['ui.router', 'templates', 'Devise', 'naif.base64'])
 .config([
   '$stateProvider',
   '$urlRouterProvider',

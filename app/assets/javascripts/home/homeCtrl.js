@@ -13,7 +13,8 @@ angular.module('crowAndKey')
       books.create({
         title: $scope.title,
         author: $scope.author,
-        summary: $scope.summary
+        summary: $scope.summary,
+        image: $scope.image
       });
     }
   }
